@@ -49,5 +49,6 @@ func GetAwsCost() [][]string {
 			}
 		}
 	}
+	fmt.Println(resultsCosts)
 	return resultsCosts
 }

@@ -1,15 +1,15 @@
-package main
+package CreateFile
 
 import (
-	costhandlres "awscostapi/costHandlers"
-	datehandlres "awscostapi/dateHandlers"
+	costhandlers "awscostapi/costHandlers"
+	datehandlers "awscostapi/dateHandlers"
 	"encoding/csv"
 	"fmt"
 	"log"
 	"os"
 )
 
-func main() {
+func Createfile() {
 	fmt.Println("Welcome to AWS cost Explorere API")
 
 	f, err := os.Create("AWSBilling.csv")
@@ -22,11 +22,11 @@ func main() {
 	w := csv.NewWriter(f)
 	defer w.Flush()
 
-	if err = w.Write(datehandlres.SetHeading()); err != nil {
+	if err = w.Write(datehandlers.SetHeading()); err != nil {
 		log.Fatal("header setter fail", err)
 	}
 
-	for _, record := range costhandlres.GetAwsCost() {
+	for _, record := range costhandlers.GetAwsCost() {
 		if err := w.Write(record); err != nil {
 			log.Fatalln("error writing record to file", err)
 		}

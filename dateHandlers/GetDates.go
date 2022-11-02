@@ -1,4 +1,4 @@
-package datehandlres
+package datehandlers
 
 import (
 	"time"
@@ -7,7 +7,7 @@ import (
 )
 
 func SetHeading() []string {
-	headings := []string{"DATE", "AWS SERVICES", "COST"}
+	headings := []string{"DATE", "AWS SERVICES", "COST(in $)"}
 
 	return headings
 }
@@ -15,7 +15,7 @@ func SetHeading() []string {
 // / getDates returns a DateInterval for the last week
 func GetDates() *costexplorer.DateInterval {
 	now := time.Now()
-	then := now.AddDate(0, 0, -7)
+	then := now.AddDate(0, 0, -1)
 	dateRange := costexplorer.DateInterval{}
 	dateRange.SetEnd(now.Format("2006-01-02"))
 	dateRange.SetStart(then.Format("2006-01-02"))
