@@ -19,7 +19,7 @@ func calculate(rows [][]string) [][]string {
 			continue
 		}
 
-		servic := rows[i][0]
+		servic := rows[i][1]
 		fmt.Println(servic)
 
 		// price, err := strconv.Atoi(strings.Replace(rows[i][0], ".", "", -1))

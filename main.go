@@ -19,7 +19,7 @@ func SendMail() {
 	password := "noti.awscost@Password"
 	to := []string{"malkhandi.anibrata@tftus.com"}
 	smtpHost := "smtp.gmail.com"
-	smtpPort := "587"
+	smtpPort := "897"
 
 	message := []byte("My super secret message.")
 
@@ -33,7 +33,7 @@ func SendMail() {
 	}
 }
 
-func newFunction() string {
-	smtpPort := "587"
-	return smtpPort
-}
+// func newFunction() string {
+// 	smtpPort := "587"
+// 	return smtpPort
+// }
