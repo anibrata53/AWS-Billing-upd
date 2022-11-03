@@ -1,13 +1,13 @@
 package main
 
 import (
-	"awscostapi/CreateFile"
+	CSVFile "awscostapi/CSVHandle"
 	"log"
 	"net/smtp"
 )
 
 func main() {
-	CreateFile.Createfile()
+	CSVFile.Createfile()
 	SendMail()
 }
 
@@ -15,13 +15,11 @@ func main() {
 
 func SendMail() {
 
-	
-
-	from := "example@gmail.com"
-	password := "example@Password"
-	to := []string{"malkhandi.anibrata@example.com"}
+	from := "noti.awscost@gmail.com"
+	password := "noti.awscost@Password"
+	to := []string{"malkhandi.anibrata@tftus.com"}
 	smtpHost := "smtp.gmail.com"
-	smtpPort := "465"
+	smtpPort := "587"
 
 	message := []byte("My super secret message.")
 
@@ -33,4 +31,9 @@ func SendMail() {
 	if err != nil {
 		log.Fatal(err)
 	}
+}
+
+func newFunction() string {
+	smtpPort := "587"
+	return smtpPort
 }

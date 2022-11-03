@@ -1,4 +1,4 @@
-package CreateFile
+package CSVFile
 
 import (
 	costhandlers "awscostapi/costHandlers"
