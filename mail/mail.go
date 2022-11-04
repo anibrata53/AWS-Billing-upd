@@ -11,7 +11,7 @@ func SendMail() {
 	password := "noti.awscost@Password"
 	to := []string{"malkhandi.anibrata@tftus.com"}
 	smtpHost := "smtp.gmail.com"
-	smtpPort := "897"
+	smtpPort := "25"
  // find the port ????????????????????????????
 	message := []byte("My super secret message.")
 
