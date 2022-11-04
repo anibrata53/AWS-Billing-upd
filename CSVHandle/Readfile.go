@@ -2,6 +2,7 @@ package CSVFile
 
 import (
 	"encoding/csv"
+	"fmt"
 	"log"
 	"os"
 )
@@ -25,7 +26,7 @@ func ReadFile(name string) [][]string {
 	if err != nil {
 		log.Fatalln("Cannot read CSV data:", err.Error())
 	}
-	// fmt.Println(rows)
+	fmt.Println(rows)
 	return rows
 
 }
