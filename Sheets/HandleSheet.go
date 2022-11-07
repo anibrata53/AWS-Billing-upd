@@ -1,5 +1,4 @@
-// package HandleSheet
-package main
+package HandleSheet
 
 import (
 	CSVFile "awscostapi/CSVHandle"
@@ -11,15 +10,14 @@ func calculate(rows [][]string) [][]string {
 	// sum := 0
 	// nb := 0
 
-	
-	for i := range rows{
+	for i := range rows {
 
 		if i == 0 {
 			rows[0] = append(rows[0], "Total")
 			continue
 		}
 
-		servic := rows[i][1]
+		servic := rows[i][2]
 		fmt.Println(servic)
 
 		// price, err := strconv.Atoi(strings.Replace(rows[i][0], ".", "", -1))

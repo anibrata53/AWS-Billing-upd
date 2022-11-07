@@ -4,7 +4,6 @@ import (
 	CSVFile "awscostapi/CSVHandle"
 	"awscostapi/bucket"
 	"fmt"
-	"time"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
@@ -13,14 +12,13 @@ import (
 
 func main() {
 	CSVFile.Createfile()
-	time.Sleep(time.Second)
+	// time.Sleep(time.Second)
 	// mail.SendMail()
 	InitBucket()
-	time.Sleep(time.Second)
+	// time.Sleep(time.Second)
 
 }
 
-// Sending Email Using Smtp in Golang
 func InitBucket() {
 	sess, err := session.NewSessionWithOptions(session.Options{
 		Profile: "default",
